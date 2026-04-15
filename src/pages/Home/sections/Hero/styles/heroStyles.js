@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const HeroSection = styled.section`
   position: relative;
-  min-height: 90vh; /* Desktop */
+  min-height: 92vh; /* Desktop */
   display: flex;
   flex-direction: column;
   justify-content: center;

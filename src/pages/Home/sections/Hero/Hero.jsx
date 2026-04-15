@@ -4,7 +4,6 @@ import {
   HeroSection,
   HeroTitle,
   Overline,
-  ScrollIndicator,
   Divider,
   HeroSubtitle,
 } from './styles/heroStyles';
@@ -32,15 +31,6 @@ export default function Hero() {
           {heroContent.subtitle}
         </HeroSubtitle>
       </ContentWrapper>
-      
-      <ScrollIndicator
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2, duration: 1.2 }}
-      >
-        <span>{heroContent.discoverLabel}</span>
-        <div className="line"></div>
-      </ScrollIndicator>
     </HeroSection>
   );
 }

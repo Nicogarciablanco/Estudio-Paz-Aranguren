@@ -7,9 +7,16 @@ export const SectionBackground = styled.section`
   
   .about-section {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Asegura que el título quede arriba a la izquierda */
+  }
+
+  .about-content {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
+    width: 100%;
   }
 
   @media (max-width: 768px) {
@@ -22,10 +29,13 @@ export const SectionBackground = styled.section`
     }
 
     .about-section {
-      flex-direction: column;
       text-align: center;
-      gap: 2rem;
       padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
+    }
+
+    .about-content {
+      flex-direction: column;
+      gap: 2rem;
     }
   }
 
@@ -33,8 +43,9 @@ export const SectionBackground = styled.section`
     display: block; /* Quitamos el flex center global para que la foto no sea atraída al área visible de arriba */
     .about-section {
       padding: 0 1rem 2rem 1rem !important; /* Ajuste interno seguro (sin padding superior para no pisar el 35vh) */
-      display: flex;
-      flex-direction: column;
+      align-items: center;
+    }
+    .about-content {
       align-items: center;
       justify-content: flex-start;
     }

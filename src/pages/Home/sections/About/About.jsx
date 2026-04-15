@@ -7,18 +7,19 @@ export default function About() {
   return (
     <SectionBackground id="about">
       <Section className="about-section">
-      <SectionTitle className="about-title" {...fadeProps}>El estudio</SectionTitle>
-        <AboutText {...fadeProps}>
-          {aboutParagraph}
-        </AboutText>
-        
-        {/* Aquí usas src y pasas la "P", "N", "G" en mayúsculas */}
-        <AboutImg 
-          src="/Sobrenosotrosimgs/sobrenosotros.PNG" 
-          alt="Sobre nosotros" 
-          {...imageRevealProps} 
-        />
-        
+        <SectionTitle className="about-title" {...fadeProps}>El estudio</SectionTitle>
+        <div className="about-content">
+          <AboutText {...fadeProps}>
+            {aboutParagraph}
+          </AboutText>
+          
+          {/* Aquí usas src y pasas la "P", "N", "G" en mayúsculas */}
+          <AboutImg 
+            src="/Sobrenosotrosimgs/sobrenosotros.PNG" 
+            alt="Sobre nosotros" 
+            {...imageRevealProps} 
+          />
+        </div>
       </Section>
     </SectionBackground>
   );
