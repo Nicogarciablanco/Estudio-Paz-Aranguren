@@ -19,6 +19,13 @@ export const SectionBackground = styled.section`
     width: 100%;
   }
 
+  @media (max-width: 1100px) {
+        .about-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
   @media (max-width: 768px) {
     min-height: clamp(35vh, 40vh, 45vh); /* Compensa de manera fluida las áreas restantes de la pantalla */
     display: flex;
@@ -31,11 +38,6 @@ export const SectionBackground = styled.section`
     .about-section {
       text-align: center;
       padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
-    }
-
-    .about-content {
-      flex-direction: column;
-      gap: 2rem;
     }
   }
 
@@ -59,7 +61,6 @@ export const AboutText = styled(motion.p)`
   max-width: 800px;
   font-weight: 300;
   white-space: pre-line;
-  max-height: auto;
 
   @media (max-width: 768px) {
     font-size: clamp(1rem, 2.5vw, 1.35rem); /* Dinamismo expandido hasta 768px */

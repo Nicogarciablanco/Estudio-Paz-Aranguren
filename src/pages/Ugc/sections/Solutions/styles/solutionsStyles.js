@@ -23,6 +23,7 @@ export const InteractiveCard = styled(motion.div)`
 
   @media (max-width: 768px) {
     padding: 2rem 1.5rem;
+    text-align: center;
   }
 
   &:hover {

@@ -37,6 +37,7 @@ export default function Navbar({ variant = 'home', title = 'Paz Aranguren' }) {
 
     const firstFocusable = focusableElements[0];
     const lastFocusable = focusableElements[focusableElements.length - 1];
+    const hamburgerButton = hamburgerRef.current;
 
     firstFocusable?.focus();
 
@@ -58,7 +59,7 @@ export default function Navbar({ variant = 'home', title = 'Paz Aranguren' }) {
 
     return () => {
       window.removeEventListener('keydown', handleTrap);
-      hamburgerRef.current?.focus();
+      hamburgerButton?.focus();
     };
   }, [isOpen]);
 

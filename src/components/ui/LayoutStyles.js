@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const Section = styled.section`
+const sharedSectionSpacing = css`
   padding: 8rem 4rem;
   max-width: 1400px;
   margin: 0 auto;
@@ -16,19 +16,20 @@ export const Section = styled.section`
   }
 `;
 
+export const Section = styled.section`
+  ${sharedSectionSpacing}
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+`;
+
 export const ContentSection = styled.section`
-  padding: 8rem 4rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
+  ${sharedSectionSpacing}
   flex: 1;
 
   @media (max-width: 768px) {
-    padding: 2rem 1.5rem;
-  }
-
-  @media (max-width: 480px) {
-    padding: 1.5rem 1rem;
+    text-align: center;
   }
 `;
 
@@ -39,10 +40,13 @@ export const SectionTitle = styled(motion.h2)`
   border-bottom: 1px solid var(--accent);
   padding-bottom: 1rem;
   display: inline-block;
+  width: fit-content;
 
   @media (max-width: 768px) {
     font-size: 2rem;
     margin-bottom: 2rem;
+    display: inline-flex;
+    margin: 0 auto 2rem;
   }
 
   @media (max-width: 480px) {

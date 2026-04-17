@@ -43,8 +43,9 @@ export const AreaCard = styled(motion.div)`
     padding: 2rem 1.5rem;
     grid-column: 1 / -1;
     grid-row: auto;
+    text-align: center;
   }
-
+  
   h3 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
@@ -55,10 +56,39 @@ export const AreaCard = styled(motion.div)`
 
     @media (max-width: 768px) {
       font-size: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      column-gap: 0.4rem;
+      justify-content: initial;
+    }
+
+    @media (max-width: 768px) {
+      &::before {
+        content: '+';
+        grid-column: 1;
+        justify-self: start;
+        visibility: hidden;
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
     }
 
     @media (max-width: 480px) {
       font-size: 1.35rem;
+    }
+
+    .title-card-text {
+      flex: 1;
+
+      @media (max-width: 768px) {
+        grid-column: 2;
+        justify-self: center;
+        width: auto;
+        max-width: 100%;
+        text-align: center;
+        white-space: normal;
+      }
     }
 
     .icon-card {
@@ -68,6 +98,15 @@ export const AreaCard = styled(motion.div)`
       transition: transform 0.3s ease;
       transform: ${({ $isCardOpen }) =>
         $isCardOpen ? 'rotate(45deg)' : 'rotate(0)'};
+
+      @media (max-width: 768px) {
+        grid-column: 3;
+        justify-self: end;
+        transform: ${({ $isCardOpen }) =>
+          $isCardOpen
+            ? 'rotate(45deg)'
+            : 'rotate(0)'};
+      }
     }
   }
 
@@ -101,7 +140,6 @@ export const SubAreaItem = styled.div`
     color: var(--text-main);
     margin-bottom: 0.5rem;
     font-family: var(--font-body);
-    font-weight: 600;
   }
 
   p {
@@ -109,6 +147,10 @@ export const SubAreaItem = styled.div`
     font-size: 0.95rem;
     line-height: 1.6;
     margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
   }
 `;
 
@@ -145,12 +187,45 @@ export const AccordionHeader = styled.button`
     color: var(--accent);
   }
 
+  .accordion-title-text {
+    flex: 1;
+  }
+
   .icon {
     font-size: 1.5rem;
     color: var(--accent);
     font-weight: 300;
     transition: transform 0.3s ease;
     transform: ${({ $isOpen }) => ($isOpen ? 'rotate(45deg)' : 'rotate(0)')};
+  }
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    column-gap: 0.4rem;
+    text-align: center;
+
+    &::before {
+      content: '+';
+      grid-column: 1;
+      justify-self: start;
+      visibility: hidden;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+
+    .accordion-title-text {
+      grid-column: 2;
+      justify-self: center;
+      width: auto;
+    }
+
+    .icon {
+      grid-column: 3;
+      justify-self: end;
+      transform: ${({ $isOpen }) => ($isOpen ? 'rotate(45deg)' : 'rotate(0)')};
+    }
   }
 `;
 

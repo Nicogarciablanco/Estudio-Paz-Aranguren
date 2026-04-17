@@ -7,11 +7,6 @@ export const Grid3Col = styled(motion.div)`
   gap: 3rem;
 
   @media (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  @media (max-width: 600px) {
     grid-template-columns: 1fr;
     gap: 2rem;
   }

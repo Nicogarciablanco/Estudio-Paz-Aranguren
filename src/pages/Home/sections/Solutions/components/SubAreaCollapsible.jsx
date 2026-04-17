@@ -13,7 +13,7 @@ export default function SubAreaCollapsible({ subArea, initiallyOpen = false }) {
   return (
     <AccordionItem>
       <AccordionHeader $isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
-        {subArea.title}
+        <span className="accordion-title-text">{subArea.title}</span>
         <span className="icon">+</span>
       </AccordionHeader>
 

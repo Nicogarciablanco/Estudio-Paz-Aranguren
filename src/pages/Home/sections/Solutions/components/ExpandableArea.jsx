@@ -12,6 +12,7 @@ export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
 
   return (
     <AreaCard
+      id={`area-card-${area.id}`}
       $isCardOpen={isOpen}
       $totalItems={totalItems}
       onClick={onToggle}
@@ -24,8 +25,9 @@ export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
       layout
       transition={smoothTransition}
     >
+      
       <h3>
-        {area.title}
+        <span className="title-card-text">{area.title}</span>
         <span className="icon-card">+</span>
       </h3>
 

@@ -13,7 +13,7 @@ export const NavContainer = styled.nav`
   align-items: center;
   z-index: 100;
   border-bottom: 1px solid rgba(10, 10, 10, 0.05);
-
+  
   @media (max-width: 768px) {
     padding: 1.2rem 2rem;
   }
@@ -25,13 +25,15 @@ export const NavContainer = styled.nav`
 `;
 
 export const NavLogo = styled.div`
+  display: flex;
+  align-items: center;
   font-family: var(--font-heading);
   font-size: 1.5rem;
+  line-height: 1;
   letter-spacing: 1px;
   color: var(--text-main);
   z-index: 101;
   white-space: nowrap; /* Evita que el título salte de línea de manera impredecible */
-
   @media (max-width: 480px) {
     font-size: clamp(1rem, 4vw, 1.25rem); /* Escalado fluido para títulos largos como Paz Aranguren | UGC */
     overflow: hidden;
@@ -42,13 +44,16 @@ export const NavLogo = styled.div`
 export const DesktopLinks = styled.div`
   display: flex;
   gap: 2.5rem;
-  font-size: 0.8rem;
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 500;
   align-items: center;
 
   a {
+    display: inline-flex;
+    align-items: center;
     transition: color 0.3s ease;
     text-decoration: none;
     color: var(--text-main);
@@ -62,9 +67,15 @@ export const DesktopLinks = styled.div`
     height: 15px;
     border: none;
     border-left: 1px solid var(--secondary-gray);
+    align-self: center;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 901px) {
+    transform: translateY(3px);
+  }
+
+  @media (max-width: 900px) {
+    font-size: smaller;
     display: none;
   }
 `;
@@ -105,7 +116,7 @@ export const Hamburger = styled.button`
     }
   `}
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: block;
   }
 `;
@@ -172,7 +183,7 @@ export const BackLink = styled(Link)`
     border-color: var(--text-main);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     padding: 0.4rem 0.8rem;
     font-size: 0.75rem;
     

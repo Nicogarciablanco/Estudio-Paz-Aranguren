@@ -10,7 +10,8 @@ export const HeroContainer = styled.div`
 
   @media (max-width: 900px) {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 3rem;
     margin-bottom: 3rem;
   }
@@ -19,6 +20,11 @@ export const HeroContainer = styled.div`
 export const TextContent = styled.div`
   flex: 1;
   max-width: 600px;
+
+  @media (max-width: 900px) {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 `;
 
 export const HeroTitle = styled(motion.h1)`
@@ -60,6 +66,10 @@ export const SocialLinks = styled.div`
   flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
+
+  @media (max-width: 900px) {
+    align-items: center;
+  }
 
   a {
     display: flex;
