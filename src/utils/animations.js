@@ -1,3 +1,4 @@
+// Utilidades compartidas del proyecto. Archivo: src/utils/animations.js
 const PREMIUM_EASE = [0.16, 1, 0.3, 1];
 
 // Fade estándar con Y offset suave (ideal para bloques grandes o párrafos)
@@ -37,3 +38,4 @@ export const imageRevealProps = {
   viewport: { once: true, margin: "-50px" },
   transition: { duration: 1.2, ease: [0.25, 1, 0.5, 1] }
 };
+

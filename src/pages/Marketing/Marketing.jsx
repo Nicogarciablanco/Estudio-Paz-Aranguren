@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/pages/Marketing/Marketing.jsx
 import React from 'react';
 import PageWrapper from '../../components/layout/PageWrapper/PageWrapper';
 import Navbar from '../../components/layout/Navbar/Navbar';
@@ -18,3 +19,4 @@ export default function Marketing() {
     </PageWrapper>
   );
 }
+

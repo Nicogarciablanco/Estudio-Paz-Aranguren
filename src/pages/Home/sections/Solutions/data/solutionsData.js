@@ -1,137 +1,268 @@
+// Datos estaticos usados por el modulo. Archivo: src/pages/Home/sections/Solutions/data/solutionsData.js
 export const solutionsData = [
   {
-    id: 'marcas',
-    title: 'Marcas',
-    desc: 'Blindaje de activos intangibles y estrategias de protección.',
+    id: 'Propiedad Intelectual',
+    title: 'Propiedad Intelectual',
     subAreas: [
       {
-        title: 'Registro',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        title: 'Marcas',
+        description:
+          'Tu identidad es tu capital. Protegemos el diferencial de quienes crean y emprenden.',
+        items: [
+          'Registro integral: PyMEs y negocios. Artistas. Auditoría de nombres y viabilidad. Estrategias legales.',
+          'Contratos: acuerdos de confidencialidad, licencias y cesión de derechos.'
+        ],
       },
       {
-        title: 'Custodia',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        title: 'Custodia de Marca',
+        description:
+          'Vigilamos tu activo intangible más importante. Nos encargamos de que nadie se aproveche de tu identidad.',
+        items: [
+          'Monitoreo diario para detectar solicitudes de marcas similares a la tuya.',
+          'Oposiciones a registros de otras marcas similares a la tuya.'
+        ],
       },
       {
         title: 'Defensa Judicial y Extrajudicial',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        description:
+          'Actuamos de inmediato para proteger tu identidad comercial o artística si está siendo vulnerada.',
+        items: [
+          'Cese de uso: intimaciones a quienes utilizan nombres, logos u otro tipo de bien intangible similar al tuyo.',
+          'Oposiciones y negociaciones: resolvemos conflictos de registros ante Instituto Nacional de la Propiedad Industrial.',
+          'Litigios judiciales: demandas por daños y perjuicios, medidas cautelares y defensa por juicios de infracción.',
+          'Acuerdos de coexistencia: redacción de convenios estratégicos para evitar conflictos legales a largo plazo.'
+        ],
       },
       {
         title: 'Asesoramiento y estrategia',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        description:
+          'Te ayudamos a construir tus ideas en activos seguros para tu PYME',
+        items: [
+          'Auditoría de identidad: analizamos la viabilidad legal de tu marca antes de que inviertas en diseño o marketing.',
+          'Planificación estratégica: definimos las clases de categorías adecuadas para proteger tu expansión futura.',
+          'Estructura legal: asesoramiento en la transición de Emprendedor a PyME.',
+          'Compliance (gestión de riesgos): blindaje contra imposibles, reclamos de terceros y contingencias legales.'
+        ],
       },
       {
-        title: 'Capacitaciones',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        title: 'Capacitaciones Legales para Emprendedores',
+        description:
+          '',
+        items: [
+          'Aspectos laborales: primeras contrataciones y prevención de conflictos.',
+          'Contratos básicos: con socios, proveedores y clientes.',
+          'Contratos para Influencer y publicidad.',
+          'Compliance (gestión de conflictos): como negociar y resolver problemas sin llegar a juicio. Normativos vigentes y buenas prácticas comerciales.',
+          'Derechos y obligaciones: todo lo que necesita saber sobre defensa del consumidor y competencia.'
+        ],
       },
       {
-        title: 'Contratos y Negocios',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        title: 'Contratos y Estructura de Negocios',
+        description:
+          'Diseñamos el Marco legal que tu empresa necesita para crecer con previsibilidad.',
+        items: [
+          'Contratos comerciales. Sociedades (estatuto social). Contrato de locación y leasing.',
+          'Términos y condiciones. Contratos para publicidad de Influencers, artistas, freelancers.',
+          'Franquicias y licencias.',
+          'Negociaciones extrajudiciales: resolución de conflictos contractuales para evitar instancias judiciales.'
+        ],
       },
-      {
-        title: 'Branding',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
-      }
     ],
   },
   {
     id: 'familia',
     title: 'Familia',
-    desc: 'Asesoramiento integral priorizando la resolución pacífica de conflictos.',
     subAreas: [
       {
-        title: 'Cuota Aliemntaria',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        title: 'Cuota Alimentaria',
+        description:
+          'Es el aporte económico obligatorio que debe realizar el progenitor que no convive con sus hijos para cubrir sus necesidades básicas. ',
+        items: [
+          'Fijación de cuota (mediación o Judicial).',
+          'Actualización de montos por inflación.',
+          'Reclamos por incumplimiento.',
+        ],
       },
       {
         title: 'Divorcios',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        description:
+          'En nuestro país, el divorcio es unilateral. Sólo hace la falta de la voluntad de uno de los dos cónyuges para disolver el vínculo matrimonial.',
+        items: [
+          'Solicitud de divorcio.',
+          'Propuesta y convenio regulador.',
+          'Liquidación de la sociedad conyugal.',
+          'Compensación económica',
+          'Inscripción de sentencia'
+        ],
       },
       {
-        title: 'Régimen de comunicación',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
-      },
-      {
-        title: 'Cuidado Personal',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        title: 'Régimen de Cuidado Personal y Comunicación',
+        description:
+          'Es el derecho y deber hacia los hijos sobre su vida cotidiana y el de mantener un contacto fluido con el progenitor con el que no conviven.',
+        items: [
+          'Plan de parentalidad.',
+          'Establecimiento de régimen.',
+          'Acuerdos.',
+          'Ejecución de régimen.',
+          'Comunicación digital'
+        ],
       },
       {
         title: 'Reconocimiento',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        description:
+          'Es el acto jurídico por el cual se formaliza el vínculo de filiación (paternidad/maternidad). Su efecto es otorgar al hijo todos los derechos y obligaciones legales, como el apellido, el derecho alimentario, la herencia y la responsabilidad parental.',
+        items: [
+          'Reconocimiento judicial y administrativo',
+          'Filiación Judicial (acciones de reclamación).',
+          'Impugnación de filiación.',
+          'Reparación de daños.'
+        ],
       },
       {
         title: 'Adopción',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        description:
+          'Es una institución jurídica que tiene como objetivo que los niños y adolescentes puedan desarrollarse en una familia cuando no pueden hacerlo en su familia de origen.',
+        items: [
+          'Proceso legal.',
+          'Inscripción y registro.',
+          'Guarda Judicial.',
+          'Juicio de adopción.',
+          'Adopción por integración.',
+          'Búsqueda de origen'
+        ],
       },
       {
         title: 'Mediación',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        description:
+          'Método a través del cual un tercero neutral (mediador) facilita la conversación entre las partes para que arriben a un acuerdo. Es una instancia previa y obligatoria. Hay excepciones.',
+        items: [
+          'Asistencia y patrocinio en audiencias.',
+          'Redacción y control de convenios.',
+          'Homologación Judicial.',
+          'Gestión de conflictos específicos'
+        ],
       },
       {
         title: 'Sucesiones',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        description:
+          'Es el proceso Judicial necesario para que los herederos puedan disponer legalmente de los bienes de una persona fallecida (inmuebles, vehículos, cuentas, bancarias o acciones). Sin este trámite, no se puede vender ni transferir los bienes.',
+        items: [
+          'Sucesiones ab intestato y testamentaria.',
+          'Declaratoria de herederos.',
+          'Inventario y avalúo.',
+          'Partición y adjudicación.',
+          'Inscripción de bienes.'
+        ],
       }
     ],
   },
   {
-    id: 'mediacion',
-    title: 'Mediación',
-    desc: 'Diseñamos estrategias eficientes para prevención y negociación.',
+    id: 'previsional',
+    title: 'Previsional',
     subAreas: [
       {
-        title: 'Mediación Prejudicial',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        title: 'Jubilaciones',
+        description:
+          '¿Cumpliste la edad, pero no tenes los aportes? ¿Querés planificar tu retiro? Nos encargamos de todo el proceso ante ANSES para que obten tu beneficio de forma y segura. ',
+        items: [
+          'Análisis de historia laboral y cómputo de años.',
+          'Aplicación de moratorias vigentes.',
+          'Jubilación por tareas de cuidado (reconocimiento por hijos).',
+          'Trámites con o sin aportes.'
+        ],
+      },
+      {
+        title: 'Pensiones y Derechos Derivados',
+        description:
+          'Te brindamos el respaldo legal necesario para tramitar tu beneficio garantizando tu seguridad económica.  ',
+        items: [
+          'Pensión por fallecimiento: para cónyuges, convivientes o hijos menores.',
+          'Pensión directa o derivada: según la situación laboral del causante.',
+          'Retiro por invalidez: gestión integral ante juntas médicas',
+          'Asesoramiento en casos de convivencia no declarada.'
+        ],
       },
     ],
   },
   {
     id: 'salud',
     title: 'Salud',
-    desc: 'Regulaciones médicas y protección de derechos del paciente.',
     subAreas: [
-        {
-        title: 'Previsional',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
-      },
       {
-        title: 'Amparos de Salud',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        title: 'Amparo de Salud',
+        description:
+          '¿Tu obra social o prepaga te niega la cobertura? Iniciamos acciones judiciales, urgentes para garantizar el cumplimiento inmediato de tus derechos.',
+        items: [
+          'Medicamentos de alto costo: solicitud de cobertura.',
+          'Tratamientos específicos: oncología, diabetes, fertilidad asistida y discapacidad. Prótesis e insumos. Internaciones y cirugías. Autorizaciones rechazadas o postergadas.',
+        ],
       },
       {
         title: 'Discapacidad',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        description:
+          'Acciones urgentes para obtener prestaciones, tratamientos o coberturas cuando la respuesta es insuficiente.',
+        items: [
+          'Reclamos por falta de pago prestadores.',
+          'Amparos judiciales.',
+          'Medidas cautelares para cobertura urgentes.',
+          'Acompañante terapéutico: gestión de asistencia domiciliaria o escolar.',
+          'Reintegros: recuperar los gastos realizados por falta de respuesta médica.'
+        ],
       }
     ],
   },
-   {
-    id: 'laboral',
-    title: 'Laboral',
-    desc: 'Diseñamos estrategias eficientes para prevención y negociación.',
+  {
+    id: 'mediacion',
+    title: 'Mediación',
     subAreas: [
       {
-        title: 'Mediación Prejudicial',
-        content:
-          'Lorem ipsum dolor sit amet, consectetur.',
+        title: '',
+        description:
+          'Es una distancia obligatoria en la mayor mayoría de los procesos civiles y de familia. Las partes intentan llegar un acuerdo con ayuda de un tercero neutral.',
+        items: [
+          'Conflictos patrimoniales y extrapatrimoniales.',
+          'Mediación familiar (detalles en la sección familia).',
+          'Acuerdo extrajudiciales.',
+        ],
       },
     ],
   },
+  
+  {
+    id: 'laboral',
+    title: 'Laboral',
+    subAreas: [
+      {
+        title: 'Trabajador',
+        description:
+          'Tu tranquilidad y el respeto a tus derechos son nuestra prioridad.',
+        items: [
+          'Trabajo en negro',
+          'Despidos',
+          'Cálculos de indemnizaciones',
+          'Diferencias salariales',
+          'Accidentes y enfermedades profesionales. Licencia psiquiátrica.',
+          'Acoso y discriminación',
+          'Conciliaciones obligatorias',
+          'Juicio laboral'
+        ],
+      },
+      {
+        title: 'Empleador',
+        description:
+          'Brindamos seguridad legal al empleador para prevenir contingencias.',
+        items: [
+          'Asesoría preventiva',
+          'Recursos humanos (RRHH)',
+          'Contratación y extinción laboral',
+          'Negociación colectiva',
+          'Higiene y seguridad',
+          'Licencia psiquiátricas',
+          'Conciliaciones obligatorias',
+          'Defensa en juicios Laborales'
+        ],
+      }
+    ],
+  },
 ];
+

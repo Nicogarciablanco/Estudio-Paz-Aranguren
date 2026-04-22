@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/components/layout/Navbar/styles/navbarStyles.js
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -196,3 +197,4 @@ export const BackLink = styled(Link)`
     }
   }
 `;
+

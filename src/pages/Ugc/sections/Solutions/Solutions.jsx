@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/pages/Ugc/sections/Solutions/Solutions.jsx
 import React from 'react';
 import { staggerContainer, staggerItem } from '../../../../utils/animations';
 import { ugcSolutions } from './data/solutionsData';
@@ -20,3 +21,4 @@ export default function Solutions() {
     </SolutionsGrid>
   );
 }
+

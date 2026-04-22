@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/components/layout/Footer/styles/footerStyles.js
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
@@ -17,3 +18,4 @@ export const FooterContainer = styled.footer`
     font-size: 0.75rem;
   }
 `;
+

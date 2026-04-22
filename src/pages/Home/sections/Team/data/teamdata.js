@@ -1,3 +1,4 @@
+// Datos estaticos usados por el modulo. Archivo: src/pages/Home/sections/Team/data/teamdata.js
 export const TeamMembers = [
   {
     id: 1,

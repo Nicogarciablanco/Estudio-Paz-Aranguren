@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/Hero/Hero.jsx
 import { fadeProps } from '../../../../utils/animations';
 import {
   ContentWrapper,
@@ -34,3 +35,4 @@ export default function Hero() {
     </HeroSection>
   );
 }
+

@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/styles/GlobalStyles.js
 import { createGlobalStyle } from 'styled-components';
 import '@fontsource/playfair-display/400.css';
 import '@fontsource/playfair-display/700.css';

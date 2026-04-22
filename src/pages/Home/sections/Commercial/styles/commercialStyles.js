@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/pages/Home/sections/Commercial/styles/commercialStyles.js
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -77,3 +78,4 @@ export const BridgeButton = styled(motion(Link))`
 export const CommercialTitle = styled(motion.h2)``;
 
 export const CommercialDescription = styled(motion.p)``;
+

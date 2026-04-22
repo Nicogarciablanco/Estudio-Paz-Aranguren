@@ -1,3 +1,4 @@
+// Datos estaticos usados por el modulo. Archivo: src/pages/Ugc/sections/Solutions/data/solutionsData.js
 export const ugcSolutions = [
   {
     title: 'Vocería Ejecutiva',
@@ -12,3 +13,4 @@ export const ugcSolutions = [
     desc: 'Píldoras de insight corporativo para plataformas verticales. Ritmo y engagement asegurado sin sacrificar prestigio.',
   },
 ];
+

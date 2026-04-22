@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/pages/Marketing/sections/Solutions/Solutions.jsx
 import React from 'react';
 import { staggerContainer, staggerItem } from '../../../../utils/animations';
 import { marketingSolutions } from './data/solutionsData';
@@ -20,3 +21,4 @@ export default function Solutions() {
     </SolutionsGrid>
   );
 }
+

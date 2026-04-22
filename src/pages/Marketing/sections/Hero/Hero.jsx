@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/pages/Marketing/sections/Hero/Hero.jsx
 import React from 'react';
 import { fadeProps } from '../../../../utils/animations';
 import { heroContent } from './data/heroContent';
@@ -15,3 +16,4 @@ export default function Hero() {
     </>
   );
 }
+

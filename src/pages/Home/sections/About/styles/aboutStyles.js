@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/pages/Home/sections/About/styles/aboutStyles.js
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 

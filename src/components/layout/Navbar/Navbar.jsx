@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/components/layout/Navbar/Navbar.jsx
 import { useState, useEffect, useRef } from 'react';
 import {
   BackLink,
@@ -152,3 +153,4 @@ export default function Navbar({ variant = 'home', title = 'Paz Aranguren' }) {
     </NavContainer>
   );
 }
+

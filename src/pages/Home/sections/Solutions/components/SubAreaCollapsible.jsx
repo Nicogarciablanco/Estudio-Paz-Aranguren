@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/Solutions/components/SubAreaCollapsible.jsx
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { smoothTransition } from '../constants/motion';
@@ -32,3 +33,4 @@ export default function SubAreaCollapsible({ subArea, initiallyOpen = false }) {
     </AccordionItem>
   );
 }
+

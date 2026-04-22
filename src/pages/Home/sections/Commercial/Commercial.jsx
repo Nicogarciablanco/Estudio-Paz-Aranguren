@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/Commercial/Commercial.jsx
 import React from 'react';
 import { fadeProps, staggerContainer, staggerItem } from '../../../../utils/animations';
 import { commercialContent } from './data/commercialData';
@@ -31,3 +32,4 @@ export default function Commercial() {
     </CommercialArea>
   );
 }
+

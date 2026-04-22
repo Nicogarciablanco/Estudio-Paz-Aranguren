@@ -1,3 +1,4 @@
+// Configuracion de Vite para desarrollo y build.
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 

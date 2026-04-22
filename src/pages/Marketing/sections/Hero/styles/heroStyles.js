@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/pages/Marketing/sections/Hero/styles/heroStyles.js
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -20,3 +21,4 @@ export const HeroText = styled(motion.p)`
     margin-bottom: 3rem;
   }
 `;
+

@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/pages/Home/sections/Team/styles/teamStyles.js
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -62,3 +63,4 @@ export const MemberJob = styled.p`
   margin-top: 0.5rem;
   white-space: pre-line;
 `;
+

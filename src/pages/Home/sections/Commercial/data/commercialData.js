@@ -1,3 +1,4 @@
+// Datos estaticos usados por el modulo. Archivo: src/pages/Home/sections/Commercial/data/commercialData.js
 export const commercialContent = {
   title: 'Area Comercial',
   description:
@@ -7,3 +8,4 @@ export const commercialContent = {
     { to: '/ugc', label: 'Videos UGC' },
   ],
 };
+

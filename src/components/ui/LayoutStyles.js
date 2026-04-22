@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/components/ui/LayoutStyles.js
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -54,3 +55,4 @@ export const SectionTitle = styled(motion.h2)`
     margin-bottom: 1.5rem;
   }
 `;
+

@@ -1,18 +1,42 @@
-# React + Vite
+# Estudio Paz Aranguren Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend institucional para Estudio Jurídico Paz Aranguren, desarrollado con React + Vite.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19
+- Vite 8
+- Styled Components
+- Framer Motion
+- React Router DOM
+- ESLint (flat config)
 
-## React Compiler
+## Scripts
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `npm run dev`: levanta entorno local de desarrollo.
+- `npm run build`: genera build de producción.
+- `npm run preview`: previsualiza el build localmente.
+- `npm run lint`: ejecuta lint sobre el proyecto.
 
-## Expanding the ESLint configuration
+## Estructura
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/components/layout`: layout compartido (`Navbar`, `Footer`, `PageWrapper`).
+- `src/components/ui`: estilos base reutilizables (`LayoutStyles`).
+- `src/pages`: páginas del sitio (`Home`, `Marketing`, `Ugc`) y secciones internas.
+- `src/styles`: estilos globales y variables de diseño.
+- `src/utils`: utilidades compartidas de animación.
 
-"Lee el archivo CONTEXT.md y revisa la memoria sobre el Frontend Estudio Jurídico Paz Aranguren para continuar"
+## Documentación Técnica
+
+La documentación integral del proyecto está en:
+
+- `docs/PROJECT_DOCUMENTATION.md`
+
+Incluye:
+
+- Arquitectura completa
+- Flujo de renderizado y navegación
+- Convenciones de desarrollo
+- Guía para agregar secciones y contenido
+- Estado actual de accesibilidad
+- Deuda técnica y roadmap sugerido

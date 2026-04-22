@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/Team/Team.jsx
 import { fadeProps, staggerContainer, staggerItem } from '../../../../utils/animations';
 import { Section, SectionTitle } from '../../../../components/ui/LayoutStyles';
 import { TeamMembers } from './data/teamdata';
@@ -36,3 +37,4 @@ export default function Team() {
     </Section>
   );
 }
+

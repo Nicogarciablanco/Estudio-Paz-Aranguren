@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/pages/Home/sections/Hero/styles/heroStyles.js
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -185,3 +186,4 @@ export const HeroSubtitle = styled(motion.p)`
     font-size: 0.75rem;
   }
 `;
+

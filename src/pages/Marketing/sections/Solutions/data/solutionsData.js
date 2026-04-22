@@ -1,3 +1,4 @@
+// Datos estaticos usados por el modulo. Archivo: src/pages/Marketing/sections/Solutions/data/solutionsData.js
 export const marketingSolutions = [
   {
     title: 'MARKETING ESTRATÉGICO/INTEGRAL',
@@ -16,3 +17,4 @@ export const marketingSolutions = [
     desc: 'Cobertura de necesidades complementarias para potenciar y escalar la estrategia.',
   },
 ];
+

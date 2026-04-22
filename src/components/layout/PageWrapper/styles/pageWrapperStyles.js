@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/components/layout/PageWrapper/styles/pageWrapperStyles.js
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -7,3 +8,4 @@ export const Wrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
 `;
+

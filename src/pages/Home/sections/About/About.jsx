@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/About/About.jsx
 import { fadeProps, imageRevealProps } from '../../../../utils/animations';
 import { Section, SectionTitle } from '../../../../components/ui/LayoutStyles';
 import { aboutParagraph } from './data/aboutContent';
@@ -24,3 +25,4 @@ export default function About() {
     </SectionBackground>
   );
 }
+

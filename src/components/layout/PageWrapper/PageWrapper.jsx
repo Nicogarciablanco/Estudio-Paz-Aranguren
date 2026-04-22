@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/components/layout/PageWrapper/PageWrapper.jsx
 import { Wrapper } from './styles/pageWrapperStyles';
 
 export default function PageWrapper({ children }) {
@@ -12,3 +13,4 @@ export default function PageWrapper({ children }) {
     </Wrapper>
   );
 }
+

@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/pages/Home/sections/Solutions/styles/solutionsStyles.js
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -149,8 +150,28 @@ export const SubAreaItem = styled.div`
     margin: 0;
   }
 
+  ul {
+    margin: 1rem 0 0;
+    padding-left: 1.2rem;
+    color: var(--text-main);
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  li {
+    color: var(--secondary-gray);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    padding-left: 0.15rem;
+  }
+
   @media (max-width: 768px) {
     text-align: center;
+
+    ul {
+      padding-left: 0;
+      list-style-position: inside;
+    }
   }
 `;
 
@@ -240,3 +261,4 @@ export const AccordionContent = styled(motion.div)`
     margin: 0;
   }
 `;
+

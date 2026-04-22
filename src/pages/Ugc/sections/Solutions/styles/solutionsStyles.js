@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/pages/Ugc/sections/Solutions/styles/solutionsStyles.js
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -48,3 +49,4 @@ export const InteractiveCard = styled(motion.div)`
     line-height: 1.7;
   }
 `;
+

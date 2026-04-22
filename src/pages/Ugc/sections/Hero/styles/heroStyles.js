@@ -1,3 +1,4 @@
+// Estilos del modulo con styled-components. Archivo: src/pages/Ugc/sections/Hero/styles/heroStyles.js
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
@@ -89,3 +90,4 @@ export const SocialLinks = styled.div`
     }
   }
 `;
+

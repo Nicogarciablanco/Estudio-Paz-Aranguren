@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/Solutions/Solutions.jsx
 import { useState } from 'react';
 import { fadeProps } from '../../../../utils/animations';
 import { Section, SectionTitle } from '../../../../components/ui/LayoutStyles';
@@ -54,3 +55,4 @@ export default function Solutions() {
     </Section>
   );
 }
+

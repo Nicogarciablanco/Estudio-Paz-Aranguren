@@ -1,3 +1,4 @@
+// Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/Solutions/components/ExpandableArea.jsx
 import { AnimatePresence } from 'framer-motion';
 import { smoothTransition } from '../constants/motion';
 import { AreaCard, AreaContentWrapper, SubAreasGrid, SubAreaItem } from '../styles/solutionsStyles';
@@ -31,8 +32,6 @@ export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
         <span className="icon-card">+</span>
       </h3>
 
-      <p>{area.desc}</p>
-
       <AnimatePresence initial={false}>
         {isOpen && (
           <AreaContentWrapper
@@ -47,7 +46,12 @@ export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
               {area.subAreas.map((subArea, subIndex) => (
                 <SubAreaItem key={subIndex}>
                   <h4>{subArea.title}</h4>
-                  <p>{subArea.content}</p>
+                  <p>{subArea.description}</p>
+                  <ul>
+                    {subArea.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>{item}</li>
+                    ))}
+                  </ul>
                 </SubAreaItem>
               ))}
             </SubAreasGrid>
@@ -57,3 +61,4 @@ export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
     </AreaCard>
   );
 }
+
