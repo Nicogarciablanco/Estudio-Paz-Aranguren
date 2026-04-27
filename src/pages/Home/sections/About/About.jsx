@@ -1,8 +1,8 @@
 // Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/About/About.jsx
-import { fadeProps, imageRevealProps } from '../../../../utils/animations';
+import { fadeProps } from '../../../../utils/animations';
 import { Section, SectionTitle } from '../../../../components/ui/LayoutStyles';
 import { aboutParagraph } from './data/aboutContent';
-import { AboutText, SectionBackground, AboutImg } from './styles/aboutStyles';
+import { AboutText, SectionBackground } from './styles/aboutStyles';
 
 export default function About() {
   return (
@@ -14,12 +14,6 @@ export default function About() {
             {aboutParagraph}
           </AboutText>
           
-          {/* Aquí usas src y pasas la "P", "N", "G" en mayúsculas */}
-          <AboutImg 
-            src="/Sobrenosotrosimgs/sobrenosotros.PNG" 
-            alt="Sobre nosotros" 
-            {...imageRevealProps} 
-          />
         </div>
       </Section>
     </SectionBackground>

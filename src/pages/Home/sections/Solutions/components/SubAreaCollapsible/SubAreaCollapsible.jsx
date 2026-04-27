@@ -1,12 +1,12 @@
-// Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/Solutions/components/SubAreaCollapsible.jsx
+// Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/Solutions/components/SubAreaCollapsible/SubAreaCollapsible.jsx
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { smoothTransition } from '../constants/motion';
+import { smoothTransition } from '../../constants/motion';
 import {
   AccordionItem,
   AccordionHeader,
   AccordionContent,
-} from '../styles/solutionsStyles';
+} from './styles/subAreaStyles';
 
 export default function SubAreaCollapsible({ subArea, initiallyOpen = false }) {
   const [isOpen, setIsOpen] = useState(initiallyOpen);

@@ -19,8 +19,9 @@ export const HeroContainer = styled.div`
 `;
 
 export const TextContent = styled.div`
-  flex: 1;
-  max-width: 600px;
+  flex: 1.25;
+  width: 100%;
+  max-width: 840px;
 
   @media (max-width: 900px) {
     max-width: 100%;
@@ -39,9 +40,20 @@ export const HeroText = styled(motion.p)`
   font-size: 1.25rem;
   color: var(--secondary-gray);
   font-weight: 300;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 72ch;
+
+  span {
+    display: block;
+  }
 
   @media (max-width: 768px) {
     font-size: 1.1rem;
+    gap: 0.85rem;
+    max-width: 100%;
   }
 `;
 
@@ -49,12 +61,12 @@ export const ImageContent = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 0.8;
+  flex: 0.55;
   
   img {
     border-radius: 100%;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center 20%;

@@ -12,8 +12,14 @@ export const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1.5rem;
   z-index: 100;
   border-bottom: 1px solid rgba(10, 10, 10, 0.05);
+
+  @media (max-width: 1200px) {
+    padding-inline: 2.5rem;
+    gap: 1rem;
+  }
   
   @media (max-width: 768px) {
     padding: 1.2rem 2rem;
@@ -25,32 +31,92 @@ export const NavContainer = styled.nav`
   }
 `;
 
-export const NavLogo = styled.div`
+export const NavLogo = styled.button`
   display: flex;
   align-items: center;
+  gap: 0.9rem;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  line-height: 1;
+  font-size: clamp(1rem, 1.55vw, 1.5rem);
+  line-height: 1.2;
   letter-spacing: 1px;
   color: var(--text-main);
   z-index: 101;
   white-space: nowrap; /* Evita que el título salte de línea de manera impredecible */
+  min-width: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  .logo-full {
+    display: inline-block;
+    max-width: min(58vw, 460px);
+    line-height: 1.2;
+    padding-bottom: 0.08em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .logo-mark {
+    width: 2.7rem;
+    height: 2.7rem;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 6px;
+  }
+
+  @media (max-width: 1200px) {
+    letter-spacing: 0.7px;
+
+    .logo-mark {
+      width: 2.35rem;
+      height: 2.35rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 0.7rem;
+
+    .logo-full {
+      max-width: calc(100vw - 170px);
+    }
+
+    .logo-mark {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
   @media (max-width: 480px) {
     font-size: clamp(1rem, 4vw, 1.25rem); /* Escalado fluido para títulos largos como Paz Aranguren | UGC */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Si sigue siendo enorme en 320px, que lo trunque elegante */
+
+    .logo-full {
+      max-width: calc(100vw - 130px);
+    }
+
+    .logo-mark {
+      width: 1.7rem;
+      height: 1.7rem;
+    }
   }
 `;
 
 export const DesktopLinks = styled.div`
   display: flex;
-  gap: 2.5rem;
+  gap: clamp(1.25rem, 2vw, 2.5rem);
   font-size: clamp(0.85rem, 1vw, 1rem);
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 500;
   align-items: center;
+  flex-shrink: 0;
+  margin-left: auto;
 
   a {
     display: inline-flex;
@@ -64,6 +130,12 @@ export const DesktopLinks = styled.div`
     }
   }
 
+  .nav-link-group {
+    display: inline-flex;
+    align-items: center;
+    gap: inherit;
+  }
+
   hr {
     height: 15px;
     border: none;
@@ -71,11 +143,23 @@ export const DesktopLinks = styled.div`
     align-self: center;
   }
 
+  .nav-separator {
+    color: var(--secondary-gray);
+    font-size: 1rem;
+    line-height: 1;
+    transform: translateY(-1px);
+  }
+
   @media (min-width: 901px) {
     transform: translateY(3px);
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1200px) {
+    gap: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 1024px) {
     font-size: smaller;
     display: none;
   }
@@ -117,7 +201,7 @@ export const Hamburger = styled.button`
     }
   `}
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     display: block;
   }
 `;
@@ -150,6 +234,12 @@ export const MobileMenu = styled.div`
     &:hover {
       color: var(--accent);
     }
+  }
+
+  .mobile-group-link {
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(10, 10, 10, 0.16);
   }
 `;
 

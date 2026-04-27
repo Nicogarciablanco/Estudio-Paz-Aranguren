@@ -1,15 +1,17 @@
 // Datos estaticos usados por el modulo. Archivo: src/components/layout/Navbar/data/navLinks.js
 export const homeNavLinksDesktop = [
-  { id: 'about', label: 'Nosotros' },
+  { id: 'about', label: 'El Estudio' },
   { id: 'team', label: 'Equipo' },
-  { id: 'solutions', label: 'Soluciones' },
+  { id: 'solutions', label: 'Areas de Practica' },
   { id: 'commercial', label: 'Area Comercial' },
+  { id: 'contacto', label: 'Contactanos' },
 ];
 
 export const homeNavLinksMobile = [
-  { id: 'about', label: 'Nosotros' },
+  { id: 'about', label: 'El Estudio' },
   { id: 'team', label: 'Equipo' },
-  { id: 'solutions', label: 'Soluciones' },
-  { id: 'commercial', label: 'Comercial' },
+  { id: 'solutions', label: 'Areas de Practica' },
+  { id: 'commercial', label: 'Area Comercial' },
+  { id: 'contacto', label: 'Contactanos' },
 ];
 

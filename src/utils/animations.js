@@ -31,11 +31,4 @@ export const staggerItem = {
   }
 };
 
-// Revealer para imágenes (Desliza un recorte tipo "telón teatral" premium)
-export const imageRevealProps = {
-  initial: { clipPath: "inset(100% 0 0 0)" },
-  whileInView: { clipPath: "inset(0% 0 0 0)" },
-  viewport: { once: true, margin: "-50px" },
-  transition: { duration: 1.2, ease: [0.25, 1, 0.5, 1] }
-};
 

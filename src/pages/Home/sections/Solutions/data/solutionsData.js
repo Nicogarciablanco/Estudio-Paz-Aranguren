@@ -3,6 +3,7 @@ export const solutionsData = [
   {
     id: 'Propiedad Intelectual',
     title: 'Propiedad Intelectual',
+    responsable: 'Dra. María M. Aranguren',
     subAreas: [
       {
         title: 'Marcas',
@@ -71,6 +72,7 @@ export const solutionsData = [
   },
   {
     id: 'familia',
+    responsable: 'Dra. Florencia Zuazaga',
     title: 'Familia',
     subAreas: [
       {
@@ -158,6 +160,7 @@ export const solutionsData = [
   },
   {
     id: 'previsional',
+    responsable: 'Dra. Florencia Zuazaga',
     title: 'Previsional',
     subAreas: [
       {
@@ -187,6 +190,7 @@ export const solutionsData = [
   {
     id: 'salud',
     title: 'Salud',
+    responsable: 'Dra. Florencia Zuazaga',
     subAreas: [
       {
         title: 'Amparo de Salud',
@@ -214,6 +218,7 @@ export const solutionsData = [
   {
     id: 'mediacion',
     title: 'Mediación',
+    responsable: 'Dra. Florencia Zuazaga',
     subAreas: [
       {
         title: '',
@@ -227,10 +232,11 @@ export const solutionsData = [
       },
     ],
   },
-  
+
   {
     id: 'laboral',
     title: 'Laboral',
+    responsable: 'Dra. Gisela E. Paz',
     subAreas: [
       {
         title: 'Trabajador',
@@ -264,5 +270,59 @@ export const solutionsData = [
       }
     ],
   },
+
+  {
+    id: 'compliance',
+    title: 'Compliance',
+    responsable: 'Dra. María M. Aranguren \n Dra. Gisela E. Paz',
+    subAreas: [
+      {
+        title: 'Auditoría y Control de Riesgos',
+        description:
+          '',
+        items: [
+          'Revisión de legajos.',
+          'Control de tercerización.'
+        ],
+      },
+      {
+        title: 'Políticas Internas y Protocolos',
+        description:
+          '',
+        items: [
+          'Manual de ética y de conducta.',
+          'Políticas de trabajo.',
+          'Protocolo de prevención de violencia y acoso.',
+          'Políticas de teletrabajo.',
+          'Políticas de trabajo registrado y locación de servicios.'
+        ],
+      },
+      {
+        title: 'Capacitación y Prevención',
+        description:
+          '',
+        items: [
+          'Capacitaciones legales para emprendedores y PyMEs (derecho laboral, derecho societario, derecho, comercial, contratos, Marketing e Influencers).',
+          'Formación legal a mandos medios.',
+          'Canales de denuncia (Whistleblowing).'
+        ],
+      },
+      {
+        title: 'Recursos Humanos RRHH',
+        description:
+          '',
+        items: [
+          'Onboarding Legal: Diseño de procesos de contratación que incluyan acuerdos de confidencialidad (NDA), propiedad intelectual y manuales de conducta.',
+          'Políticas de trabajo.',
+          'Desvinculación programadas: Manejo técnico de despidos o renuncias negociadas para minimizar riesgo litigios laborales.',
+          'Due Diligence Laboral:  encuadre sindical (CCT).',
+          'Protocolos de bienestar y conducta.',
+          'Reglamentos .',
+          'Relaciones gremiales.',
+          'Armado de legajos laborales.'
+        ],
+      },
+    ],
+  }
 ];
 

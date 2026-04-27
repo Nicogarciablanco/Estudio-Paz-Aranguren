@@ -1,9 +1,14 @@
-// Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/Solutions/components/ExpandableArea.jsx
+﻿// Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/Solutions/components/ExpandableArea/ExpandableArea.jsx
 import { AnimatePresence } from 'framer-motion';
-import { smoothTransition } from '../constants/motion';
-import { AreaCard, AreaContentWrapper, SubAreasGrid, SubAreaItem } from '../styles/solutionsStyles';
+import { smoothTransition } from '../../constants/motion';
+import { AreaCard, AreaContentWrapper, SubAreasGrid, SubAreaItem } from './styles/expandableAreaStyles';
 
 export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
+  const denseResponsableLength = (area.responsable ?? '').replace(/\s+/g, ' ').trim().length;
+  const isDenseClosed =
+    !isOpen &&
+    ((area.title?.length ?? 0) > 18 || denseResponsableLength > 30);
+
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -15,7 +20,9 @@ export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
     <AreaCard
       id={`area-card-${area.id}`}
       $isCardOpen={isOpen}
+      $isDenseClosed={isDenseClosed}
       $totalItems={totalItems}
+      data-open={isOpen}
       onClick={onToggle}
       onKeyDown={handleKeyDown}
       role="button"
@@ -26,7 +33,9 @@ export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
       layout
       transition={smoothTransition}
     >
-      
+      {area.responsable && (
+        <span className="responsable-text">Responsable: {area.responsable}</span>
+      )}
       <h3>
         <span className="title-card-text">{area.title}</span>
         <span className="icon-card">+</span>

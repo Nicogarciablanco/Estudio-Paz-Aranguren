@@ -10,7 +10,7 @@ import Solutions from './sections/Solutions/Solutions';
 export default function Ugc() {
   return (
     <PageWrapper>
-      <Navbar variant="inner" title="Paz Aranguren | UGC" />
+      <Navbar variant="inner" title="Paz Aranguren Zuazaga | UGC" />
       <ContentSection>
         <Hero />
         <Solutions />

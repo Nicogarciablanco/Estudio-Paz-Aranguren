@@ -12,7 +12,9 @@ export default function Hero() {
           {heroContent.title}
         </HeroTitle>
         <HeroText {...fadeProps} transition={{ duration: 0.8, delay: 0.2 }}>
-          {heroContent.description}
+          {heroContent.description.map((paragraph) => (
+            <span key={paragraph}>{paragraph}</span>
+          ))}
         </HeroText>
       </TextContent>
       <ImageContent {...fadeProps} transition={{ duration: 0.8, delay: 0.4 }}>

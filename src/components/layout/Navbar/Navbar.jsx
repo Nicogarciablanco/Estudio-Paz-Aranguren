@@ -1,5 +1,6 @@
 // Componente de interfaz del proyecto. Archivo: src/components/layout/Navbar/Navbar.jsx
 import { useState, useEffect, useRef } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
   BackLink,
   DesktopLinks,
@@ -10,10 +11,12 @@ import {
 } from './styles/navbarStyles';
 import { homeNavLinksDesktop, homeNavLinksMobile } from './data/navLinks';
 
-export default function Navbar({ variant = 'home', title = 'Paz Aranguren' }) {
+export default function Navbar({ variant = 'home', title = 'Paz Aranguren Zuazaga' }) {
   const [isOpen, setIsOpen] = useState(false);
   const hamburgerRef = useRef(null);
   const mobileMenuRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   // Cerrar menú con tecla Escape por accesibilidad
   useEffect(() => {
@@ -71,40 +74,72 @@ export default function Navbar({ variant = 'home', title = 'Paz Aranguren' }) {
       const prefersReducedMotion = window
         .matchMedia('(prefers-reduced-motion: reduce)')
         .matches;
-      el.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      const navHeight = document.querySelector('nav')?.offsetHeight ?? 0;
+      const targetTop = el.getBoundingClientRect().top + window.scrollY - navHeight - 12;
+
+      window.scrollTo({
+        top: Math.max(targetTop, 0),
+        left: 0,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+      });
     }
   };
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const handleLogoClick = () => {
+    setIsOpen(false);
+
+    if (location.pathname === '/') {
+      const prefersReducedMotion = window
+        .matchMedia('(prefers-reduced-motion: reduce)')
+        .matches;
+
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+      });
+      return;
+    }
+
+    navigate('/');
+  };
+
   return (
     <NavContainer>
-      <NavLogo>{title}</NavLogo>
+      <NavLogo
+        type="button"
+        onClick={handleLogoClick}
+        aria-label="Ir al inicio"
+      >
+        <img
+          className="logo-mark"
+          src="/Navbarimgs/Balanza-navbar.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <span className="logo-full">{title}</span>
+      </NavLogo>
       {variant === 'home' ? (
         <>
           <DesktopLinks>
-            {homeNavLinksDesktop.slice(0, 3).map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollTo(item.id);
-                }}
-              >
-                {item.label}
-              </a>
+            {homeNavLinksDesktop.map((item) => (
+              <span key={item.id} className="nav-link-group">
+                {(item.id === 'commercial' || item.id === 'contacto') && (
+                  <span className="nav-separator" aria-hidden="true">|</span>
+                )}
+                <a
+                  href={`#${item.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollTo(item.id);
+                  }}
+                >
+                  {item.label}
+                </a>
+              </span>
             ))}
-            <hr />
-            <a
-              href="#commercial"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollTo('commercial');
-              }}
-            >
-              {homeNavLinksDesktop[3].label}
-            </a>
           </DesktopLinks>
           
           <Hamburger 
@@ -132,6 +167,7 @@ export default function Navbar({ variant = 'home', title = 'Paz Aranguren' }) {
             {homeNavLinksMobile.map((item) => (
               <a
                 key={item.id}
+                className={item.id === 'commercial' || item.id === 'contacto' ? 'mobile-group-link' : undefined}
                 href={`#${item.id}`}
                 onClick={(e) => {
                   e.preventDefault();

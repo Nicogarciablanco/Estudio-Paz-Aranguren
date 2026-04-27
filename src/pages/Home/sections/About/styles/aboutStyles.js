@@ -32,10 +32,6 @@ export const SectionBackground = styled.section`
     display: flex;
     align-items: center;
 
-    .about-title {
-      display: none;
-    }
-
     .about-section {
       text-align: center;
       padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) !important;
@@ -59,7 +55,6 @@ export const AboutText = styled(motion.p)`
   font-size: 1.5rem;
   line-height: 1.8;
   color: var(--text-main);
-  max-width: 800px;
   font-weight: 300;
   white-space: pre-line;
 
@@ -77,22 +72,5 @@ export const AboutText = styled(motion.p)`
     align-items: center;
     justify-content: center;
     margin: 0;
-  }
-`;
-
-export const AboutImg = styled(motion.img)`
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px; /* Pequeño ajuste estético opcional */
-
-  @media (max-width: 768px) {
-    max-width: 250px;
-  }
-
-  @media (max-width: 480px) {
-    max-width: 250px;
-    margin-top: 1rem; /* Empujada sutilmente debajo del final de los 35vh del texto */
   }
 `;

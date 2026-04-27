@@ -12,13 +12,13 @@ import Commercial from './sections/Commercial/Commercial';
 export default function Home() {
   return (
     <PageWrapper>
-      <Navbar variant="home" title="Paz Aranguren" />
+      <Navbar variant="home" />
       <Hero />
       <About />
       <Team />
       <Solutions />
       <Commercial />
-      <Footer text="Estudio Paz Aranguren. Todos los derechos reservados." />
+      <Footer showContact text="Estudio Paz Aranguren. Todos los derechos reservados." />
     </PageWrapper>
   );
 }

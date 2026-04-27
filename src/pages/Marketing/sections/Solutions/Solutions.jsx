@@ -16,6 +16,13 @@ export default function Solutions() {
         <InteractiveCard key={idx} variants={staggerItem}>
           <h3>{item.title}</h3>
           <p>{item.desc}</p>
+          {item.services && item.services.length > 0 && (
+            <ul className="services-list">
+              {item.services.map((service, i) => (
+                <li key={i}>{service}</li>
+              ))}
+            </ul>
+          )}
         </InteractiveCard>
       ))}
     </SolutionsGrid>

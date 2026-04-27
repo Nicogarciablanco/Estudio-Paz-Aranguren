@@ -10,7 +10,7 @@ import Solutions from './sections/Solutions/Solutions';
 export default function Marketing() {
   return (
     <PageWrapper>
-      <Navbar variant="inner" title="Paz Aranguren | MKT" />
+      <Navbar variant="inner" title="Paz Aranguren Zuazaga | MKT" />
       <ContentSection>
         <Hero />
         <Solutions />

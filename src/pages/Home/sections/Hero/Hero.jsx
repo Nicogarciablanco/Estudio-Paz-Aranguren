@@ -5,7 +5,6 @@ import {
   HeroSection,
   HeroTitle,
   Overline,
-  Divider,
   HeroSubtitle,
 } from './styles/heroStyles';
 import { heroContent } from './data/heroContent';
@@ -18,16 +17,8 @@ export default function Hero() {
           {heroContent.overline}
         </Overline>
         <HeroTitle {...fadeProps} transition={{ duration: 1, delay: 1.1 }}>
-          {heroContent.titleLines.map((line) => (
-            <span key={line}>{line}</span>
-          ))}
+          {heroContent.titleLines}
         </HeroTitle>
-        
-        <Divider 
-          initial={{ width: 0, opacity: 0 }} 
-          animate={{ width: "40px", opacity: 0.5 }} 
-          transition={{ duration: 1.2, delay: 1.4 }} 
-        />
         <HeroSubtitle {...fadeProps} transition={{ duration: 1, delay: 1.6 }}>
           {heroContent.subtitle}
         </HeroSubtitle>
