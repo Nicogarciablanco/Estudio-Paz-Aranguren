@@ -1,0 +1,13 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F2F2F0"/>
+  <path d="M0 520C150 455 270 430 410 432C570 434 680 482 833 478C972 474 1070 435 1200 399V630H0V520Z" fill="#E6E1D6"/>
+  <circle cx="980" cy="140" r="118" fill="#EFEBE3"/>
+  <circle cx="980" cy="140" r="68" fill="#F7F4EF"/>
+  <path d="M980 74L920 140H1040L980 74Z" fill="#96815E"/>
+  <rect x="552" y="128" width="92" height="10" rx="5" fill="#96815E"/>
+  <rect x="481" y="188" width="238" height="10" rx="5" fill="#0A0A0A" opacity="0.18"/>
+  <text x="90" y="178" fill="#0A0A0A" font-family="Playfair Display, Georgia, serif" font-size="74" font-weight="400" letter-spacing="0.02em">Estudio Paz Aranguren</text>
+  <text x="90" y="252" fill="#4D4D4D" font-family="Montserrat, Arial, sans-serif" font-size="28" font-weight="400" letter-spacing="0.12em">ASESORAMIENTO LEGAL • MARKETING • UGC</text>
+  <text x="90" y="360" fill="#0A0A0A" font-family="Playfair Display, Georgia, serif" font-size="44" font-weight="400">Derecho laboral, familia, marcas y mediación</text>
+  <text x="90" y="418" fill="#4D4D4D" font-family="Montserrat, Arial, sans-serif" font-size="24" font-weight="400">Una presencia editorial, clara y profesional para cada área del estudio.</text>
+</svg>

@@ -5,7 +5,7 @@ export const commercialContent = {
     'Contamos con una unidad exclusiva de crecimiento enfocada en escalar y posicionar el impacto de su empresa más allá del resguardo legal.',
   links: [
     { to: '/marketing', label: 'Area Marketing' },
-    { to: '/ugc', label: 'Contenido UGC' },
+    { to: '/ugc', label: 'Influencers' },
   ],
 };
 

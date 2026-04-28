@@ -6,12 +6,22 @@ import {
   HeroTitle,
   Overline,
   HeroSubtitle,
+  HeroImage,
 } from './styles/heroStyles';
 import { heroContent } from './data/heroContent';
 
 export default function Hero() {
   return (
     <HeroSection>
+      <HeroImage
+        srcSet="
+          /Heroimgs/Balanza-hero-optimized.avif 1x,
+          /Heroimgs/Balanza-hero-optimized.webp 1x
+        "
+        src="/Heroimgs/Balanza-hero-optimized.png"
+        alt="Balanza del estudio jurídico"
+        aria-hidden="true"
+      />
       <ContentWrapper>
         <Overline {...fadeProps} transition={{ duration: 0.8, delay: 0.6 }}>
           {heroContent.overline}

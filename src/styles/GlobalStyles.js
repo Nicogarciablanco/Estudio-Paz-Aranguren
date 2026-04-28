@@ -39,6 +39,26 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
+  .skip-link {
+    position: fixed;
+    top: -4rem;
+    left: 1rem;
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    background: var(--text-main);
+    color: var(--bg-color);
+    border: 1px solid var(--text-main);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: top 0.2s ease;
+  }
+
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    top: 1rem;
+  }
+
   /* Mejora de Accesibilidad: Soporte visible para navegación por teclado */
   :focus-visible {
     outline: 2px solid var(--accent);

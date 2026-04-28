@@ -25,7 +25,7 @@ export default function Team() {
         {TeamMembers.map((member) => (
           <TeamMember key={member.id} variants={staggerItem}>
             <MemberPhoto>
-              <img src={member.img} alt={member.name} />
+              <img src={member.img} alt={`Retrato de ${member.name}`} loading="lazy" decoding="async" />
             </MemberPhoto>
             <MemberName>{member.name}</MemberName>
             <MemberRegistration>{member.registration}</MemberRegistration>

@@ -25,35 +25,36 @@ export const HeroSection = styled.section`
 
   @media (max-width: 480px) {
     --hero-optical-center-shift: 6px;
-    --hero-balance-x-shift: 6px;
+    --hero-balance-x-shift: 0px;
     min-height: 55vh; /* Darle mayor jerarquía y peso visual frente al About */
     padding: 1rem;
   }
 
-  &::before {
-    content: '';
-    position: absolute;
-    width: 90%;
-    height: 70%;
-    background-image: url('/Heroimgs/Balanza-hero.png');
-    background-size: contain;
-    background-position: calc(50% + var(--hero-balance-x-shift)) center;
-    background-repeat: no-repeat;
-    filter: blur(5px) opacity(0.7);
-    opacity: 0;
-    z-index: 0;
-    animation: fadeZoomIn 2.5s ease-out 0.5s forwards;
-  }
+  /* Pseudo-element removed: using <img> with srcset for LCP control */
+`;
 
+export const HeroImage = styled.img`
+  position: absolute;
+  width: 90%;
+  height: 70%;
+  object-fit: contain;
+  filter: blur(5px) opacity(0.7);
+  opacity: 0;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeZoomIn 2.5s ease-out 0.5s forwards;
+  
   @keyframes fadeZoomIn {
     0% {
       opacity: 0;
-      transform: scale(1.05);
+      transform: translate(-50%, -50%) scale(1.05);
     }
 
     100% {
       opacity: 0.3;
-      transform: scale(1);
+      transform: translate(-50%, -50%) scale(1);
     }
   }
 `;

@@ -18,7 +18,13 @@ export default function Hero() {
         </HeroText>
       </TextContent>
       <ImageContent {...fadeProps} transition={{ duration: 0.8, delay: 0.4 }}>
-        <img src="/Marketingimgs/TesistaAilenMetetiero.png" alt="Marketing" />
+        <img
+          src="/Marketingimgs/TesistaAilenMetetiero.png"
+          alt="Retrato de Ailén Metetiero, área de marketing de Estudio Paz Aranguren"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
         <ImageTitle>Ailén Metetiero</ImageTitle>
         <ImageDescription>
           Tesista de la Licenciatura en Marketing.

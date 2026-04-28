@@ -34,6 +34,13 @@ export const ContentSection = styled.section`
   }
 `;
 
+export const MainContent = styled(motion.main)`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+`;
+
 export const SectionTitle = styled(motion.h2)`
   font-size: 2.5rem;
   margin-bottom: 3rem;

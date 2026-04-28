@@ -11,7 +11,7 @@ export const TeamMembers = [
     id: 2,
     img: "/Teamimgs/Dra.Aranguren.png", // Reemplaza con la ruta de la imagen del profesional
     name: "Dra. María M. Aranguren",
-    registration: "Mat. N° 10579 T VI F° 210 C.A.S.F.\nAgente de la Propiedad intelectual Mat. 3134",
+    registration: "Mat. N° 10579 T VI F° 210 C.A.S.F.\nAg. de la Propiedad intelectual Mat. 3134",
     description: "Perito Judicial en Delitos Económicos. \n Compliance Officer. Universidad Pontificia de Salamanca. España \n Pre Litigation Legal Assistant - Starks Byron P.C. - United States (actualidad) \n Derecho de la Propiedad Intelectual \n Compliance",
 
   },
@@ -20,6 +20,6 @@ export const TeamMembers = [
     img: "/Teamimgs/Dra.Zuazaga.jpg", // Reemplaza con la ruta de la imagen del profesional
     name: "Dra. Florencia Zuazaga",
     registration: "Mat. N° 11220 T°II F°4 C.A.E.R \n Mat. Federal T°140 F°922",
-    description: "Doceente \n Mediadora \n Derecho de Familia \n Derecho Previsional \n Derecho de la Salud",
+    description: "Docente \n Mediadora \n Derecho de Familia \n Derecho Previsional \n Derecho de la Salud",
   }
 ];

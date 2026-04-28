@@ -8,16 +8,19 @@ import About from './sections/About/About';
 import Team from './sections/Team/Team';
 import Solutions from './sections/Solutions/Solutions';
 import Commercial from './sections/Commercial/Commercial';
+import { MainContent } from '../../components/ui/LayoutStyles';
 
 export default function Home() {
   return (
     <PageWrapper>
       <Navbar variant="home" />
-      <Hero />
-      <About />
-      <Team />
-      <Solutions />
-      <Commercial />
+      <MainContent id="main-content" tabIndex={-1}>
+        <Hero />
+        <About />
+        <Team />
+        <Solutions />
+        <Commercial />
+      </MainContent>
       <Footer showContact text="Estudio Paz Aranguren. Todos los derechos reservados." />
     </PageWrapper>
   );

@@ -115,7 +115,11 @@ export default function Navbar({ variant = 'home', title = 'Paz Aranguren Zuazag
       >
         <img
           className="logo-mark"
-          src="/Navbarimgs/Balanza-navbar.png"
+          srcSet="
+            /Navbarimgs/Balanza-navbar-optimized.avif 1x,
+            /Navbarimgs/Balanza-navbar-optimized.webp 1x
+          "
+          src="/Navbarimgs/Balanza-navbar-optimized.png"
           alt=""
           aria-hidden="true"
         />
