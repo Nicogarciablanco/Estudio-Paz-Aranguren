@@ -5,7 +5,6 @@ export const FooterContainer = styled.footer`
   position: relative;
   padding: ${({ $showContact }) => ($showContact ? '3rem 4rem 2.5rem' : '3rem 4rem')};
   color: var(--secondary-gray);
-  border-top: 1px solid rgba(10, 10, 10, 0.08);
   background: rgba(242, 242, 240, 0.9);
 
   .footer-contact-shell {
@@ -16,6 +15,7 @@ export const FooterContainer = styled.footer`
     align-items: start;
     max-width: 1400px;
     margin: 0 auto;
+    margin-bottom: 3rem;
   }
 
   .footer-contact-copy {
@@ -46,6 +46,9 @@ export const FooterContainer = styled.footer`
   }
 
   .footer-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.6rem 1rem;
@@ -68,6 +71,13 @@ export const FooterContainer = styled.footer`
   }
 
   .footer-contact-card:hover {
+    color: var(--accent);
+    border-color: rgba(150, 129, 94, 0.34);
+  }
+
+  .footer-contact-card:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
     color: var(--accent);
     border-color: rgba(150, 129, 94, 0.34);
   }
@@ -100,15 +110,32 @@ export const FooterContainer = styled.footer`
     .footer-contact-shell {
       grid-template-columns: 1fr;
       gap: 1rem;
+      justify-items: center;
+      text-align: center;
     }
 
     .footer-contact-list {
       grid-template-columns: 1fr;
       min-width: 0;
+      width: 100%;
+      max-width: 28rem;
     }
 
     .footer-contact-copy h2 {
       max-width: none;
+    }
+
+    .footer-contact-copy,
+    .footer-contact-list,
+    .footer-legal {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer-contact-card {
+      align-items: center;
+      text-align: center;
+      border-bottom: none;
     }
   }
 

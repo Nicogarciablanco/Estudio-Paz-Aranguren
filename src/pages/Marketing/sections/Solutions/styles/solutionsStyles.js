@@ -15,23 +15,15 @@ export const SolutionsGrid = styled(motion.div)`
 export const InteractiveCard = styled(motion.div)`
   padding: 3rem 2rem;
   background-color: var(--bg-color);
-  border: 1px solid rgba(10, 10, 10, 0.08);
+  border: 1px solid var(--accent);
   transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
   @media (max-width: 768px) {
     padding: 2rem 1.5rem;
     text-align: center;
   }
 
-  &:hover {
-    background-color: var(--light-beige);
-    border-color: var(--accent);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(10, 10, 10, 0.05);
-  }
 
   h3 {
     font-size: 1.5rem;

@@ -136,20 +136,6 @@ export const DesktopLinks = styled.div`
     gap: inherit;
   }
 
-  hr {
-    height: 15px;
-    border: none;
-    border-left: 1px solid var(--secondary-gray);
-    align-self: center;
-  }
-
-  .nav-separator {
-    color: var(--secondary-gray);
-    font-size: 1rem;
-    line-height: 1;
-    transform: translateY(-1px);
-  }
-
   @media (min-width: 901px) {
     transform: translateY(3px);
   }
@@ -239,7 +225,6 @@ export const MobileMenu = styled.div`
   .mobile-group-link {
     margin-top: 0.85rem;
     padding-top: 0.85rem;
-    border-top: 1px solid rgba(10, 10, 10, 0.16);
   }
 `;
 

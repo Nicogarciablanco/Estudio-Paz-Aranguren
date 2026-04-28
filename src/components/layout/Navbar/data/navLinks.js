@@ -4,7 +4,7 @@ export const homeNavLinksDesktop = [
   { id: 'team', label: 'Equipo' },
   { id: 'solutions', label: 'Areas de Practica' },
   { id: 'commercial', label: 'Area Comercial' },
-  { id: 'contacto', label: 'Contactanos' },
+  { id: 'contacto', label: 'Contacto' },
 ];
 
 export const homeNavLinksMobile = [
@@ -12,6 +12,6 @@ export const homeNavLinksMobile = [
   { id: 'team', label: 'Equipo' },
   { id: 'solutions', label: 'Areas de Practica' },
   { id: 'commercial', label: 'Area Comercial' },
-  { id: 'contacto', label: 'Contactanos' },
+  { id: 'contacto', label: 'Contacto' },
 ];
 

@@ -3,11 +3,20 @@ import { AnimatePresence } from 'framer-motion';
 import { smoothTransition } from '../../constants/motion';
 import { AreaCard, AreaContentWrapper, SubAreasGrid, SubAreaItem } from './styles/expandableAreaStyles';
 
-export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
+export default function ExpandableArea({
+  area,
+  isOpen,
+  isMuted = false,
+  isSelectedPreview = false,
+  isRail = false,
+  onToggle,
+  totalItems,
+}) {
   const denseResponsableLength = (area.responsable ?? '').replace(/\s+/g, ' ').trim().length;
   const isDenseClosed =
     !isOpen &&
     ((area.title?.length ?? 0) > 18 || denseResponsableLength > 30);
+  const showContent = isOpen && !isSelectedPreview;
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
@@ -20,6 +29,9 @@ export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
     <AreaCard
       id={`area-card-${area.id}`}
       $isCardOpen={isOpen}
+      $isMuted={isMuted}
+      $isSelectedPreview={isSelectedPreview}
+      $isInRail={isRail}
       $isDenseClosed={isDenseClosed}
       $totalItems={totalItems}
       data-open={isOpen}
@@ -27,9 +39,9 @@ export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
       onKeyDown={handleKeyDown}
       role="button"
       tabIndex={0}
-      aria-expanded={isOpen}
+      aria-expanded={showContent}
       aria-controls={`area-content-${area.id}`}
-      aria-label={`${area.title}, ${isOpen ? 'expandida' : 'colapsada'}`}
+      aria-label={`${area.title}, ${showContent ? 'expandida' : 'colapsada'}`}
       layout
       transition={smoothTransition}
     >
@@ -38,11 +50,11 @@ export default function ExpandableArea({ area, isOpen, onToggle, totalItems }) {
       )}
       <h3>
         <span className="title-card-text">{area.title}</span>
-        <span className="icon-card">+</span>
+        {!isOpen && <span className="icon-card">+</span>}
       </h3>
 
       <AnimatePresence initial={false}>
-        {isOpen && (
+        {showContent && (
           <AreaContentWrapper
             id={`area-content-${area.id}`}
             initial={{ opacity: 0, height: 0 }}

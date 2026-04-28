@@ -2,50 +2,67 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-// Contenedor principal del grid de soluciones
-export const GridContainer = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1rem;
-  max-width: 1200px;
+export const BoardShell = styled(motion.div)`
+  position: relative;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 1rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0.25rem;
+    border: 1px solid rgba(10, 10, 10, 0.08);
+    border-radius: 1.75rem;
+    background:
+      linear-gradient(135deg, rgba(10, 10, 10, 0.025), transparent 40%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(250, 248, 244, 0.96));
+    box-shadow: 0 24px 80px rgba(10, 10, 10, 0.06);
+    pointer-events: none;
+  }
 `;
 
-export const TopRow = styled.div`
-  display: flex;
+export const DesktopSplit = styled.div`
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(280px, 30%) minmax(0, 1fr);
   gap: 1.5rem;
-  align-items: start;
   width: 100%;
+  align-items: start;
+  padding: 1.25rem;
 
-  @media (max-width: 1100px) {
-    flex-wrap: wrap;
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    padding: 1rem;
   }
+`;
+
+export const RailColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+  align-self: start;
 `;
 
 export const MainColumn = styled.div`
   display: flex;
-  flex: 3 1 0;
   min-width: 0;
-  min-height: 0;
+
+  > * {
+    width: 100%;
+  }
 `;
 
-export const RightColumn = styled.div`
+export const MobileStack = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  align-items: stretch;
-  flex: 1 1 0;
-  min-width: 280px;
-`;
-
-export const BottomRow = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 1;
 `;
 

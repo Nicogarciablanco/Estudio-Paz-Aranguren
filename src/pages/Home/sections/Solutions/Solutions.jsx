@@ -1,13 +1,17 @@
 // Componente de interfaz del proyecto. Archivo: src/pages/Home/sections/Solutions/Solutions.jsx
-import { useState, useRef, useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { fadeProps } from '../../../../utils/animations';
 import { Section, SectionTitle } from '../../../../components/ui/LayoutStyles';
 import { solutionsData } from './data/solutionsData';
 import ExpandableArea from './components/ExpandableArea/ExpandableArea';
-import { GridContainer, TopRow, MainColumn, RightColumn, BottomRow } from './styles/solutionsStyles';
+import { DesktopSplit, RailColumn, MainColumn, MobileStack } from './styles/solutionsStyles';
 
 export default function Solutions() {
   const [openAreaId, setOpenAreaId] = useState(solutionsData[0].id);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window === 'undefined' ? false : window.innerWidth <= 1200
+  );
+  const scrollTimeoutRef = useRef(null);
 
   const scrollToAreaStart = (id) => {
     const targetCard = document.getElementById(`area-card-${id}`);
@@ -32,10 +36,13 @@ export default function Solutions() {
   const handleToggleArea = (id) => {
     if (openAreaId !== id) {
       setOpenAreaId(id);
-      
-      // Esperamos a que la animación de Framer Motion (~0.5s) 
-      // progrese/termine para calcular la posición real de la tarjeta y scrollear
-      setTimeout(() => {
+
+      if (scrollTimeoutRef.current) {
+        window.clearTimeout(scrollTimeoutRef.current);
+      }
+
+      // Esperamos a que la transición de Framer Motion progrese antes de reubicar el viewport.
+      scrollTimeoutRef.current = window.setTimeout(() => {
         scrollToAreaStart(id);
       }, 400);
     }
@@ -44,12 +51,6 @@ export default function Solutions() {
   const openArea = solutionsData.find((a) => a.id === openAreaId) ?? solutionsData[0];
   const closedAreas = solutionsData.filter((a) => a.id !== openArea.id);
 
-  const containerRef = useRef(null);
-  const mainRef = useRef(null);
-  const [visibleCount, setVisibleCount] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1200);
-
-  // Sincronización del estado mobile para asegurar el flujo de una sola columna
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= 1200);
     checkMobile();
@@ -58,109 +59,70 @@ export default function Solutions() {
   }, []);
 
   useEffect(() => {
-    // Medir la altura del main (tarjeta abierta) y aplicarla como variable CSS al contenedor
-    const setMainHeight = () => {
-      const mainEl = mainRef.current;
-      const containerEl = containerRef.current;
-
-      if (!mainEl || !containerEl) return;
-
-      if (isMobile) {
-        // Eliminamos las restricciones de altura de escritorio
-        containerEl.style.removeProperty('--top-height');
-        mainEl.style.removeProperty('height');
-        setVisibleCount(0);
-        return;
+    return () => {
+      if (scrollTimeoutRef.current) {
+        window.clearTimeout(scrollTimeoutRef.current);
       }
-
-      const naturalMainHeight = mainEl.offsetHeight;
-      const closedEl = containerEl.querySelector('[data-open="false"]');
-      const closedHeight = closedEl ? closedEl.offsetHeight : 240;
-      const gapValue = parseFloat(getComputedStyle(containerEl).gap) || 24;
-      const perItem = closedHeight + gapValue;
-
-      let bestK = 1;
-      for (let k = 1; k <= closedAreas.length; k++) {
-        const stacked = k * perItem - gapValue;
-        bestK = k;
-        if (stacked >= naturalMainHeight) break;
-      }
-
-      const visible = Math.min(bestK, closedAreas.length);
-      const rightColumnHeight = visible * perItem - gapValue;
-      const finalTopHeight = Math.max(naturalMainHeight, rightColumnHeight);
-
-      containerEl.style.setProperty('--top-height', `${finalTopHeight}px`);
-      setVisibleCount(visible);
     };
-
-    setMainHeight();
-    window.addEventListener('resize', setMainHeight);
-    return () => window.removeEventListener('resize', setMainHeight);
-  }, [openAreaId, closedAreas.length, isMobile]);
+  }, []);
 
   return (
     <Section id="solutions">
       <SectionTitle {...fadeProps}>Áreas de Práctica</SectionTitle>
 
-      <GridContainer ref={containerRef}>
-        {isMobile ? (
-          /* Layout Simple para Mobile: Una sola columna sin contenedores complejos */
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+      {isMobile ? (
+        <MobileStack>
+          <ExpandableArea
+            area={openArea}
+            isOpen={true}
+            onToggle={() => handleToggleArea(openArea.id)}
+            totalItems={solutionsData.length}
+          />
+          {closedAreas.map((area, index) => (
             <ExpandableArea
-              area={openArea}
-              isOpen={true}
-              onToggle={() => handleToggleArea(openArea.id)}
+              key={area.id}
+              area={area}
+              isOpen={false}
+              onToggle={() => handleToggleArea(area.id)}
               totalItems={solutionsData.length}
+              isMuted={index !== 0}
             />
-            {closedAreas.map((area) => (
+          ))}
+        </MobileStack>
+      ) : (
+          <DesktopSplit>
+            <RailColumn>
               <ExpandableArea
-                key={area.id}
-                area={area}
+                area={openArea}
                 isOpen={false}
-                onToggle={() => handleToggleArea(area.id)}
+                onToggle={() => handleToggleArea(openArea.id)}
                 totalItems={solutionsData.length}
+                isMuted={false}
+                isSelectedPreview={true}
+                isRail={true}
               />
-            ))}
-          </div>
-        ) : (
-          /* Layout Editorial para Desktop: TopRow (Main + Right) y BottomRow */
-          <>
-            <TopRow>
-              <MainColumn ref={mainRef}>
-                <ExpandableArea
-                  area={openArea}
-                  isOpen={true}
-                  onToggle={() => handleToggleArea(openArea.id)}
-                  totalItems={solutionsData.length}
-                />
-              </MainColumn>
-              <RightColumn>
-                {closedAreas.slice(0, visibleCount).map((area) => (
-                  <ExpandableArea
-                    key={area.id}
-                    area={area}
-                    isOpen={false}
-                    onToggle={() => handleToggleArea(area.id)}
-                    totalItems={solutionsData.length}
-                  />
-                ))}
-              </RightColumn>
-            </TopRow>
-            <BottomRow>
-              {closedAreas.slice(visibleCount).map((area) => (
+              {closedAreas.map((area) => (
                 <ExpandableArea
                   key={area.id}
                   area={area}
                   isOpen={false}
                   onToggle={() => handleToggleArea(area.id)}
                   totalItems={solutionsData.length}
+                  isMuted={true}
+                  isRail={true}
                 />
               ))}
-            </BottomRow>
-          </>
-        )}
-      </GridContainer>
+            </RailColumn>
+            <MainColumn>
+              <ExpandableArea
+                area={openArea}
+                isOpen={true}
+                onToggle={() => handleToggleArea(openArea.id)}
+                totalItems={solutionsData.length}
+              />
+            </MainColumn>
+          </DesktopSplit>
+      )}
     </Section>
   );
 }

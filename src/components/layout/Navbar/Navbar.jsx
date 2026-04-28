@@ -126,9 +126,6 @@ export default function Navbar({ variant = 'home', title = 'Paz Aranguren Zuazag
           <DesktopLinks>
             {homeNavLinksDesktop.map((item) => (
               <span key={item.id} className="nav-link-group">
-                {(item.id === 'commercial' || item.id === 'contacto') && (
-                  <span className="nav-separator" aria-hidden="true">|</span>
-                )}
                 <a
                   href={`#${item.id}`}
                   onClick={(e) => {
@@ -167,7 +164,6 @@ export default function Navbar({ variant = 'home', title = 'Paz Aranguren Zuazag
             {homeNavLinksMobile.map((item) => (
               <a
                 key={item.id}
-                className={item.id === 'commercial' || item.id === 'contacto' ? 'mobile-group-link' : undefined}
                 href={`#${item.id}`}
                 onClick={(e) => {
                   e.preventDefault();
