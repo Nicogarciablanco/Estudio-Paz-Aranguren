@@ -17,7 +17,7 @@ export default function Ugc() {
           <Solutions />
         </ContentSection>
       </MainContent>
-      <Footer text="Estudio Paz Aranguren. Producción UGC." topBorder />
+      <Footer text="Estudio Paz Aranguren Zuazaga. División Comercial." topBorder />
     </PageWrapper>
   );
 }

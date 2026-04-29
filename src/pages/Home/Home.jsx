@@ -21,7 +21,7 @@ export default function Home() {
         <Solutions />
         <Commercial />
       </MainContent>
-      <Footer showContact text="Estudio Paz Aranguren. Todos los derechos reservados." />
+      <Footer showContact text="Estudio Paz Aranguren Zuazaga. Todos los derechos reservados." />
     </PageWrapper>
   );
 }

@@ -17,7 +17,7 @@ export default function Marketing() {
           <Solutions />
         </ContentSection>
       </MainContent>
-      <Footer text="Estudio Paz Aranguren. División Comercial." topBorder />
+      <Footer text="Estudio Paz Aranguren Zuazaga. División Comercial." topBorder />
     </PageWrapper>
   );
 }
