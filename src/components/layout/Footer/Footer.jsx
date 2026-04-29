@@ -34,10 +34,15 @@ const contactLinks = [
 
 export default function Footer({
   text = 'Estudio Paz Aranguren Zuazaga. Todos los derechos reservados.',
-  showContact = false,
+  showContact = true,
+  topBorder = false,
 }) {
   return (
-    <FooterContainer id={showContact ? 'contacto' : undefined} $showContact={showContact}>
+    <FooterContainer
+      id={showContact ? 'contacto' : undefined}
+      $showContact={showContact}
+      $topBorder={topBorder}
+    >
       {showContact && (
         <div className="footer-contact-shell">
           <div className="footer-contact-copy">

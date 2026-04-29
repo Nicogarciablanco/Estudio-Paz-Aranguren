@@ -6,6 +6,7 @@ export const FooterContainer = styled.footer`
   padding: ${({ $showContact }) => ($showContact ? '3rem 4rem 2.5rem' : '3rem 4rem')};
   color: var(--secondary-gray);
   background: rgba(242, 242, 240, 0.9);
+  border-top: ${({ $topBorder }) => ($topBorder ? '1px solid var(--accent)' : 'none')};
 
   .footer-contact-shell {
     position: relative;
