@@ -2,6 +2,7 @@
 import { AnimatePresence } from 'framer-motion';
 import { smoothTransition } from '../../constants/motion';
 import { AreaCard, AreaContentWrapper, SubAreasGrid, SubAreaItem } from './styles/expandableAreaStyles';
+import SubAreaCollapsible from '../SubAreaCollapsible/SubAreaCollapsible';
 
 export default function ExpandableArea({
   area,
@@ -66,13 +67,13 @@ export default function ExpandableArea({
             <SubAreasGrid>
               {area.subAreas.map((subArea, subIndex) => (
                 <SubAreaItem key={subIndex}>
-                  <h4>{subArea.title}</h4>
-                  <p>{subArea.description}</p>
-                  <ul>
-                    {subArea.items.map((item, itemIndex) => (
-                      <li key={itemIndex}>{item}</li>
-                    ))}
-                  </ul>
+                  <SubAreaCollapsible
+                    subArea={{
+                      ...subArea,
+                      contentId: `subarea-content-${area.id}-${subIndex}`,
+                      isLast: subIndex === area.subAreas.length - 1,
+                    }}
+                  />
                 </SubAreaItem>
               ))}
             </SubAreasGrid>

@@ -5,9 +5,9 @@ import { FooterContainer } from './styles/footerStyles';
 const contactLinks = [
   {
     id: 'whatsapp',
-    label: 'WhatsApp / Llamada',
+    label: 'WhatsApp',
     href: 'https://wa.me/+5493434563532',
-    note: '3434563532',
+    note: '+5493434563532',
     external: true,
   },
   {

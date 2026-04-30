@@ -46,18 +46,6 @@ export const solutionsData = [
         ],
       },
       {
-        title: 'Capacitaciones Legales para Emprendedores',
-        description:
-          '',
-        items: [
-          'Aspectos laborales: primeras contrataciones y prevención de conflictos.',
-          'Contratos básicos: con socios, proveedores y clientes.',
-          'Contratos para Influencer y publicidad.',
-          'Compliance (gestión de conflictos): como negociar y resolver problemas sin llegar a juicio. Normativos vigentes y buenas prácticas comerciales.',
-          'Derechos y obligaciones: todo lo que necesita saber sobre defensa del consumidor y competencia.'
-        ],
-      },
-      {
         title: 'Contratos y Estructura de Negocios',
         description:
           'Diseñamos el Marco legal que tu empresa necesita para crecer con previsibilidad.',
@@ -239,21 +227,6 @@ export const solutionsData = [
     responsable: 'Dra. Gisela E. Paz',
     subAreas: [
       {
-        title: 'Trabajador',
-        description:
-          'Tu tranquilidad y el respeto a tus derechos son nuestra prioridad.',
-        items: [
-          'Trabajo en negro',
-          'Despidos',
-          'Cálculos de indemnizaciones',
-          'Diferencias salariales',
-          'Accidentes y enfermedades profesionales. Licencia psiquiátrica.',
-          'Acoso y discriminación',
-          'Conciliaciones obligatorias',
-          'Juicio laboral'
-        ],
-      },
-      {
         title: 'Empleador',
         description:
           'Brindamos seguridad legal al empleador para prevenir contingencias.',
@@ -266,6 +239,21 @@ export const solutionsData = [
           'Licencia psiquiátricas',
           'Conciliaciones obligatorias',
           'Defensa en juicios Laborales'
+        ],
+      },
+      {
+        title: 'Trabajador',
+        description:
+          'Tu tranquilidad y el respeto a tus derechos son nuestra prioridad.',
+        items: [
+          'Trabajo en negro',
+          'Despidos',
+          'Cálculos de indemnizaciones',
+          'Diferencias salariales',
+          'Accidentes y enfermedades profesionales. Licencia psiquiátrica.',
+          'Acoso y discriminación',
+          'Conciliaciones obligatorias',
+          'Juicio laboral'
         ],
       }
     ],

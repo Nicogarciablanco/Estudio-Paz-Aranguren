@@ -38,7 +38,7 @@ export const HeroImage = styled.img`
   width: 90%;
   height: 70%;
   object-fit: contain;
-  filter: blur(5px) opacity(0.7);
+  filter: blur(7px) opacity(0.5);
   opacity: 0;
   z-index: 0;
   left: 50%;

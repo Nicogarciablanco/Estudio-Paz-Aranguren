@@ -3,20 +3,14 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const AccordionItem = styled.div`
-  border-top: 1px solid rgba(10, 10, 10, 0.08);
-
-  &:first-child {
-    margin-top: 2rem;
-  }
-
-  &:last-child {
-    border-bottom: 1px solid rgba(10, 10, 10, 0.08);
-  }
+  border-bottom: ${({ $isLast }) => ($isLast ? '1px solid transparent' : '1px solid rgba(10, 10, 10, 0.08)')};
+  padding-bottom: 0.95rem;
 `;
 
 export const AccordionHeader = styled.button`
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 0;
@@ -29,13 +23,27 @@ export const AccordionHeader = styled.button`
   font-weight: 500;
   color: var(--text-main);
   transition: color 0.3s;
+  gap: 1rem;
 
   &:hover {
     color: var(--accent);
   }
 
+  .accordion-copy {
+    display: grid;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+
   .accordion-title-text {
     flex: 1;
+    font-size: 1.02rem;
+  }
+
+  .accordion-description {
+    color: var(--secondary-gray);
+    font-size: 0.92rem;
+    line-height: 1.6;
   }
 
   .icon {
@@ -68,6 +76,10 @@ export const AccordionHeader = styled.button`
       width: auto;
     }
 
+    .accordion-description {
+      text-align: center;
+    }
+
     .icon {
       grid-column: 3;
       justify-self: end;
@@ -78,12 +90,34 @@ export const AccordionHeader = styled.button`
 
 export const AccordionContent = styled(motion.div)`
   overflow: hidden;
+  padding-top: ${({ $isStaticContent }) => ($isStaticContent ? '0.75rem' : '0.75rem')};
+  max-height: ${({ $isStaticContent }) => ($isStaticContent ? 'none' : '0')};
+  opacity: ${({ $isStaticContent }) => ($isStaticContent ? 1 : 0)};
 
-  p {
+  .accordion-description {
+    color: var(--secondary-gray);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin: 0 0 0.75rem;
+  }
+
+  ul {
+    margin: 0.75rem 0 0;
+    padding-left: 1.2rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  li {
     color: var(--secondary-gray);
     font-size: 0.9rem;
     line-height: 1.6;
-    padding-bottom: 1.2rem;
-    margin: 0;
+  }
+
+  @media (max-width: 1100px) {
+    ul {
+      padding-left: 0;
+      list-style: none;
+    }
   }
 `;
