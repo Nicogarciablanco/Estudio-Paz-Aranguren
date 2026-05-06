@@ -3,10 +3,10 @@ const PREMIUM_EASE = [0.16, 1, 0.3, 1];
 
 // Fade estándar con Y offset suave (ideal para bloques grandes o párrafos)
 export const fadeProps = {
-  initial: { opacity: 0, y: 50 },
+  initial: { opacity: 0, y: 32 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-50px" },
-  transition: { duration: 0.8, ease: PREMIUM_EASE }
+  viewport: { once: true, margin: "0px" },
+  transition: { duration: 0.65, ease: PREMIUM_EASE }
 };
 
 // Contenedor padre para Staggering elegante (Casillas, grids, equipo)
@@ -15,8 +15,8 @@ export const staggerContainer = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.2
+      staggerChildren: 0.1,
+      delayChildren: 0.1
     }
   }
 };
@@ -27,7 +27,7 @@ export const staggerItem = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: PREMIUM_EASE }
+    transition: { duration: 0.6, ease: PREMIUM_EASE }
   }
 };
 

@@ -1,11 +1,12 @@
 // Componente de interfaz del proyecto. Archivo: src/App.jsx
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { GlobalStyle } from './styles/GlobalStyles.js';
-import Home from './pages/Home/Home.jsx';
-import Marketing from './pages/Marketing/Marketing.jsx';
-import Ugc from './pages/Ugc/Ugc.jsx';
+
+const Home = lazy(() => import('./pages/Home/Home.jsx'));
+const Marketing = lazy(() => import('./pages/Marketing/Marketing.jsx'));
+const Ugc = lazy(() => import('./pages/Ugc/Ugc.jsx'));
 
 const siteName = 'Estudio Paz Aranguren';
 const siteDescription = 'Estudio Jurídico Paz Aranguren Zuazaga. Asesoramiento legal integral, estratégico y corporativo en Marcas, Familia, Laboral y Mediación.';
@@ -238,11 +239,13 @@ function AnimatedRoutes() {
 
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/marketing" element={<Marketing />} />
-        <Route path="/ugc" element={<Ugc />} />
-      </Routes>
+      <Suspense fallback={<div style={{ minHeight: '40vh' }} aria-hidden="true" />}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/marketing" element={<Marketing />} />
+          <Route path="/ugc" element={<Ugc />} />
+        </Routes>
+      </Suspense>
     </AnimatePresence>
   );
 }

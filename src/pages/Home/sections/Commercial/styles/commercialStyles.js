@@ -60,6 +60,10 @@ export const BridgeButton = styled(motion(Link))`
   border: 1px solid var(--accent);
   color: var(--bg-color);
   padding: 1rem 2.5rem;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;

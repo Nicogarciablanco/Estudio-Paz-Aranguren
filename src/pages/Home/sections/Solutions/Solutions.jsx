@@ -68,7 +68,7 @@ export default function Solutions() {
 
   return (
     <Section id="solutions">
-      <SectionTitle {...fadeProps}>Áreas de Práctica</SectionTitle>
+      <SectionTitle {...fadeProps}>Area Legal</SectionTitle>
 
       {isMobile ? (
         <MobileStack>
